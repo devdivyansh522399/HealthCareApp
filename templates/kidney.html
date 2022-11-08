@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href= {{ url_for('static', filename='css/kidney.css') }}>
+    <link rel="stylesheet" href="fontawesome-free-5.15.3-web/css/all.min.css">
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper/swiper-bundle.min.css"
+    />
+</head>
+  <body>
+    <header class="header">
+        <img src={{ url_for('static', filename = 'images/logo.png')}} id="logo" alt="">
+        <nav class="navbar">
+            <a href="/HealthCareApp/index.html">home</a>
+            <a href="/HealthCareApp/index.html">about</a>
+            <a href="/HealthCareApp/index.html">services</a>
+            <a href="/HealthCareApp/index.html">gallery</a>
+            <a href="/HealthCareApp/index.html">contact</a>
+        </nav>
+
+        <div class="icons">
+            <div id="menubar" class="fas fa-bars"></div>
+            <a href="#">contact</a>
+        </div>
+    </header>
+    <div class="container">
+        <div class="heading">
+            Kidney Check Up
+        </div>
+        <form action="/submit4" method="POST">
+            <div class="card-details">
+                <div class="card-box">
+                    <span class="details">Age</span>
+                    <input type="number" placeholder="Age">
+                </div>
+                <div class="card-box">
+                    <span class="details">Blood Pressure</span>
+                    <input type="number" placeholder="Blood Pressure">
+                </div>
+                <div class="card-box">
+                    <span class="details">Aluminium</span>
+                    <input type="number" placeholder="Aluminium">
+                </div>
+                <div class="card-box">
+                    <span class="details"> pheochromocytoma </span>
+                    <input type="number" placeholder="If present then enter 1 otherwise 0">
+                </div>
+                <div class="card-box">
+                    <span class="details">Blood Glucose Regulator</span>
+                    <input type="number" placeholder="Blood Glucose Regulator">
+                </div>
+                <div class="card-box">
+                    <span class="details">Blood Urine Nitrogen</span>
+                    <input type="number" placeholder="Blood Urine Nitrogen">
+                </div>
+                <div class="card-box">
+                    <span class="details">Sickle cell anemia</span>
+                    <input type="number" placeholder="Sickle cell anemia">
+                </div>
+                <div class="card-box">
+                    <span class="details">Hemoglobin</span>
+                    <input type="number" placeholder="Hemoglobin">
+                </div>
+                <div class="card-box">
+                    <span class="details">PCB</span>
+                    <input type="number" placeholder="PCB">
+                </div>
+                <div class="card-box">
+                    <span class="details">Hypertension</span>
+                    <input type="number" placeholder="Yes = 1 and No = 0">
+                </div>
+                <div class="card-box">
+                    <span class="details">DM</span>
+                    <input type="number" placeholder="Yes = 1 and No = 0">
+                </div>
+                <div class="card-box">
+                    <span class="details">Appet</span>
+                    <input type="number" placeholder="Good = 1 and Poor = 0">
+                </div>
+            </div>
+            <div class="button">
+            </div>
+                <button type="predict" class="btn btn-danger">Predict</button>
+            </div>
+        </form>
+    </div>
+    <script src='https://kit.fontawesome.com/a076d05399.js'></script>
+  </body>
+</html>
